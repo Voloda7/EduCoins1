@@ -1,0 +1,85 @@
+*{box-sizing: border-box}
+
+:root{
+    --accent:#6d28d9;
+    --accent-l:#ede9fe;
+    --bg:#f5f6fc;
+    --text:#1e1b33;
+    --muted:#6b7280;
+    --border:#e8e8f2;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    color:var(--text);
+    min-height:100vh;
+    background:radial-gradient(1100px 550px at 5%, -10%, #ede9fe 0%, transparent 60),
+    radial-gradient(900px 500px at 100%, 0%, #dbeafe 0%, transparent 55%),
+    var(--bg);
+    -webkit-text-size-adjust:100%;
+}
+
+h1,h2,h3{margin:0 0 8px}
+h2{font-size:20px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+/*----------Кнопки----------*/
+
+.btn{
+    border:none;border-radius:10px;padding:11px 18px;font-size:15px;
+    font-weight:600;cursor:pointer;font-family:inherit;transition:15s;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+}
+.btn.primary{
+    background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;
+    box-shadow:0 8px 18px rgba(124,58,237,.30);
+}
+.btn.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.primary:active{transform:translateY(0)}
+.btn.ghost{background:#fff;border:1px solid var(--border);color:var(--text)}
+.btn.ghost:hover{background:#f6f6fb}
+.btn.small{padding:6px 12px;font-size:13px;border-radius:8px;
+}
+.btn:disabled{opacity:5;cursor:not-allowed;box-shadow:none;transform:none;}
+
+/*----------Поле вводу----------*/
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+select{
+    width:100%;padding:11px 13px;border:1px solid var(--border);border-radius:10px;
+    font-size:16px;/*16px-Щоб IOS не зумив про фокусі*/
+
+    font-family:inherit;background:#fbfbfe;
+    color:inherit;
+    outline:none;transition:15s;
+    -webkit-appearance:none;
+    appearance:none;
+}
+input:focus,select:focus{
+    border-color:var(--accent);background:#fff;
+    box-shadow:0 0 0 3px rgba(109,40,217,.13);
+}
+input[type=checkbox]{
+    width:18px;height:18px;accent-color:var(--accent);
+    cursor:pointer;flex:none;
+}
+label.field{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
+label.field.grow{flex:1;min-width:180px}
+
+/*----------Авторизація----------*/
+
+.auth-wrap{min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:24px}
+.auth-card{width:100%;max-width:420px;padding:32px;text-align:center}
+.brand{
+    font-size:26px;font-weight:800;letter-spacing:-.5px;
+    background:linear-gradient(135deg,#7c3aed,#a855f7);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.auth-card .brand{margin-bottom:4px}
+.tabs{display:flex;gap:6px;background:#f1f1f8;padding:5px;border-radius:12px;margin:20px 0 18px}
