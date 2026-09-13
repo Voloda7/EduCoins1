@@ -188,3 +188,19 @@ form{display:flex;flex-direction:column;gap:14px;text-align:left}
 }
 
 /*----------Тост----------*/
+#toast{
+    position:fixed;left:50%;bottom:28px;
+    bottom:calc(28px + env(safe-area-inset-bottom));
+    transform:translate(-50%,120%);
+    background:#1e1b33;color:#fff;padding:13px 22px;border-radius:12px;
+    font-size:14px;font-weight:600;z-index:100;
+    box-shadow:0 12px 30px rgba(0,0,0,.28);
+    transition:transform .3s cubic-bezier(.2,.8,.3,1.2);pointer-events:none;max-width:90vw;text-align:center;
+}
+#toast.show{transform:translate(-50%,0)}
+#toast.ok{background:#15803d}
+#toast.err{background:#b91c1c}
+
+/*==============================
+       МОБІЛЬНА АДАПТАЦІЯ
+  ==============================*/
