@@ -83,3 +83,62 @@ label.field.grow{flex:1;min-width:180px}
 }
 .auth-card .brand{margin-bottom:4px}
 .tabs{display:flex;gap:6px;background:#f1f1f8;padding:5px;border-radius:12px;margin:20px 0 18px}
+.tab{
+    flex:1;border:none;background:transparent;padding:10px;border-radius:9px;
+    font-family:inherit;font-size:14px;font-weight:600;color:var(--muted);
+    cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent;
+}
+
+.tab.active{background:#fff;color:var(--accent);box-shadow:0 2px 8px rgba(0,0,0,.07)}
+form{display:flex;flex-direction:column;gap:14px;text-align:left}
+.error{
+    background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;
+    padding:10px 12px;border-radius:10px;font-size:13px;
+}
+.notice{
+    background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;
+    padding:10px 12px;border-radius:10px;font-size:13px;text-align:left;margin-top:14px;
+}
+
+/*----------Карточки----------*/
+.card{
+    background:#fff;border:1px solid var(--border);border-radius:18px;
+    padding:22px;box-shadow:0 10px 30px rgba(30,27,51,.05);
+}
+.container{
+    max-width:900px;margin:0 auto;padding:24px 20px 60px;
+    padding-bottom:calc(60px+env(safe-area-inset-bottom));
+    display:flex;flex-direction:column;gap:2 0px;
+}
+
+/*----------Шапка----------*/
+.topbar{
+    background:rgba(255,255,255,.85);backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:10;
+    padding-top:env(safe-area-inset-top);
+}
+.topbar-inner{
+    max-width:900px;margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;flex-wrap:wrap;
+}
+.userbox{display:flex;align-items:center;gap:12px;font-weight:600;font-size:14px}
+.badge{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+    padding:4px 9px;border-radius:999px;
+}
+.badge.teacher{background:#ede9fe;color:#6d28d9}
+.badge.student{background:#dbeafe;color:#1d4ed8}
+
+/*----------Статистика----------*/
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(15px,1fr));gap:14px}
+.stat{
+    background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;
+    box-shadow:0 8px 24px rgba(30,27,51,.04);
+}
+.stat-val{font-size:28px;font-weight:800;color:var(--accent);line-height:1.1}
+.stat-lbl{font-size:13px;color:var(--muted);margin-top:4px}
+
+/*----------Керування Нарахуванням----------*/
